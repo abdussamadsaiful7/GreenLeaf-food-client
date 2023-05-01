@@ -14,7 +14,7 @@ const Header = () => {
     }
 
     return (
-        <div className='mx-10'>
+        <div className='mx-10 shadow-md p-4'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -28,7 +28,7 @@ const Header = () => {
                             <li><Link to='/register'>Registration</Link></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">𝕲𝖗𝖊𝖊𝖓𝕷𝖊𝖆𝕱- 𝕱𝖔𝖔𝖉</a>
+                    <a className="btn btn-ghost normal-case text-2xl font-bold text-yellow-600 ">𝕲𝖗𝖊𝖊𝖓𝕷𝖊𝖆𝕱- 𝕱𝖔𝖔𝖉</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -36,7 +36,7 @@ const Header = () => {
                         <li><Link to='/blog'>Blog</Link></li>
                         <li><Link to='/login'>Login</Link></li>
                         <li><Link to='/register'>Registration</Link></li>
-                        <p className='mt-3'>{user && <span>{user?.email} <button className='btn btn-sm ml-4' onClick={handleLogout}>Sign Out</button></span>}</p>
+                        <p className='mt-2'>{user && <span>{user?.email} <button className='btn btn-sm ml-4' onClick={handleLogout}>Sign Out</button></span>}</p>
                     </ul>
                 </div>
                 <div className="navbar-end">

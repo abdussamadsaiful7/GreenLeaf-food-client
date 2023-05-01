@@ -72,13 +72,13 @@ const Register = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Confirm Password</span>
+                                    <span className="label-text">photo URL</span>
                                 </label>
-                                <input type="password" name='confirm' placeholder="Confirm password" className="input input-bordered" required />
+                                <input type="text" name='confirm' placeholder="Confirm password" className="input input-bordered" required />
                             </div>
                             <label className="label">
                                 <a href="#" className="label-text-alt ">Already have an account?
-                                    <Link className='link link-hover' to='/login'>Login</Link></a>
+                                    <Link className='link link-hover text-red-600 ml-2' to='/login'>Login</Link></a>
                             </label>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
