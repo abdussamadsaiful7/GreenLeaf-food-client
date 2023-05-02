@@ -1,6 +1,11 @@
 import React from 'react';
 import chief from '../assets/chief.jpg'
 import service from '../assets/service_food.jpg'
+import Chef from './Chef';
+import pic1 from '../assets/pic-1.jpg'
+import pic2 from '../assets/pic-2.jpg'
+import pic3 from '../assets/pic-3.jpg'
+import pic4 from '../assets/pic-5.jpg'
 
 const Home = () => {
     return (
@@ -13,7 +18,7 @@ const Home = () => {
                     <p>Welcome to our restaurant in Dhaka, Bangladesh, where we pride ourselves on serving traditional and famous dishes that will tantalize your taste buds. Our menu features an array of authentic Bangladeshi cuisine, prepared with fresh, local ingredients and seasoned with aromatic spices. We aim to provide a dining experience that showcases the rich culinary heritage of our country while also delivering exceptional customer service. Come and enjoy our delicious food, and let us transport you to the heart of Bangladesh's gastronomic culture.</p>
                 </div>
                 <div>
-                    <img className='rounded' src={chief} alt='photo' />
+                    <img className='rounded-lg' src={chief} alt='photo' />
                 </div>
             </div>
             <div className='lg:flex items-center justify-around  my-10 p-8 shadow-lg'>
@@ -21,7 +26,7 @@ const Home = () => {
                     <img className='w-96 rounded-md' src={service} />
                 </div>
                 <div className='ml-20'>
-                    <h2 className='bg-yellow-400 text-3xl my-8 rounded text-white font-bold mr-96 text-center'>Our Services</h2>
+                    <h2 className='bg-yellow-500 text-3xl my-8 rounded text-white font-bold mr-96 text-center'>Our Services</h2>
                     <ul>
                         <li className='mb-2 text-lg'> 🍔 Home delivery</li>
                         <li className='mb-2 text-lg'> 🍦 Instant Food cooking</li>
@@ -35,6 +40,39 @@ const Home = () => {
                     </ul>
                 </div>
             </div>
+            <div className='bg-white p-8 shadow-lg'>
+                <div className="carousel w-auto h-96 bg-white shadow-lg rounded-lg">
+                    <div id="slide1" className="carousel-item relative w-full">
+                        <img src={pic1} className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide4" className="btn btn-circle">❮</a>
+                            <a href="#slide2" className="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide2" className="carousel-item relative w-full">
+                        <img src={pic2} className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide1" className="btn btn-circle">❮</a>
+                            <a href="#slide3" className="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide3" className="carousel-item relative w-full">
+                        <img src={pic3}  className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide2" className="btn btn-circle">❮</a>
+                            <a href="#slide4" className="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide4" className="carousel-item relative w-full">
+                        <img src={pic3}  className="w-full" />
+                        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide3" className="btn btn-circle">❮</a>
+                            <a href="#slide1" className="btn btn-circle">❯</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <Chef></Chef>
         </div>
     );
 };

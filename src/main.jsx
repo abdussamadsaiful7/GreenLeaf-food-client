@@ -14,6 +14,7 @@ import Blog from './Components/Blog.jsx';
 import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
 import AuthProviders from './Components/AuthProviders.jsx';
+import FavoriteRecipe from './Components/FavoriteRecipe.jsx';
 
 
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/recipe',
+        element:<FavoriteRecipe></FavoriteRecipe>
       }
     ]
   },
