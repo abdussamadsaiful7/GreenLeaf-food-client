@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
       },
       {
         path: '/blog',
@@ -39,9 +39,11 @@ const router = createBrowserRouter([
         element: <Register></Register>
       },
       {
-        path: '/recipe',
-        element:<FavoriteRecipe></FavoriteRecipe>
+        path: 'recipe/:id',
+        element: <FavoriteRecipe></FavoriteRecipe>,
+        loader: ({params}) => fetch(`http://localhost:5000/allData/${params.id}`)
       }
+
     ]
   },
   {

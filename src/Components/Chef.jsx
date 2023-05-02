@@ -11,7 +11,7 @@ const Chef = () => {
             .catch(error => console.log(error))
     }, [])
     return (
-        <div className=' mt-20'>
+        <div className='mt-20'>
             <div className='bg-slate-200 p-4 shadow-md mb-14'>
                 <div className='text-center bg-white shadow-lg p-2'>
                     <h2 className='text-4xl'>𝙊𝙪𝙧 𝙎𝙩𝙖𝙛𝙛𝙨</h2>
