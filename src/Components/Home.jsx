@@ -5,7 +5,7 @@ import Chef from './Chef';
 import pic1 from '../assets/pic-1.jpg'
 import pic2 from '../assets/pic-2.jpg'
 import pic3 from '../assets/pic-3.jpg'
-import pic4 from '../assets/pic-5.jpg'
+import pic4 from '../assets/pic-4.jpg'
 
 const Home = () => {
     return (
@@ -65,7 +65,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div id="slide4" className="carousel-item relative w-full">
-                        <img src={pic3}  className="w-full" />
+                        <img src={pic4}  className="w-full" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide3" className="btn btn-circle">❮</a>
                             <a href="#slide1" className="btn btn-circle">❯</a>

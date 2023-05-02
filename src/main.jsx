@@ -16,12 +16,14 @@ import Register from './Components/Register.jsx';
 import AuthProviders from './Components/AuthProviders.jsx';
 import FavoriteRecipe from './Components/FavoriteRecipe.jsx';
 import PrivateRoute from './Components/PrivateRoute.jsx';
+import Error from './Components/Error.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<Error></Error>,
     children: [
       {
         path: '/',
