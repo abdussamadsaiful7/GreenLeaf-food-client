@@ -12,6 +12,7 @@ const Home = () => {
         <div className='mx-10'>
             <div className=' mt-10 lg:flex justify-between my-10 shadow-lg p-4'>
                 <div className='p-4'>
+                    <p> Bangladeshi restaurant!</p>
                     <h1 className='font-bold text-4xl'>𝑮𝒓𝒆𝒆𝒏𝑳𝒆𝒂𝒇 𝒇𝒐𝒐𝒅 𝑹𝒔𝒕.</h1>
                     <h5><small className='ml-72'>Since 1992.</small><br /><small className='ml-40'>Allah Korim mosque, Mohammadpur, <br /> <span className='ml-64'>Dhaka, Bangladesh.</span></small></h5>
                     <button className=' bg-yellow-500 text-white p-1 my-2 text-right rounded font-semibold'>Our mission, purpose, tradition.</button>

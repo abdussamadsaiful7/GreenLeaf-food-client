@@ -15,6 +15,7 @@ import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
 import AuthProviders from './Components/AuthProviders.jsx';
 import FavoriteRecipe from './Components/FavoriteRecipe.jsx';
+import PrivateRoute from './Components/PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -40,8 +41,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'recipe/:id',
-        element: <FavoriteRecipe></FavoriteRecipe>,
-        loader: ({params}) => fetch(`http://localhost:5000/allData/${params.id}`)
+        element: <PrivateRoute> <FavoriteRecipe></FavoriteRecipe></PrivateRoute>,
+        loader: ({params}) => fetch(`https://assignment-server-abdussamadsaiful7.vercel.app/allData/${params.id}`)
       }
 
     ]
