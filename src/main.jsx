@@ -17,6 +17,7 @@ import AuthProviders from './Components/AuthProviders.jsx';
 import FavoriteRecipe from './Components/FavoriteRecipe.jsx';
 import PrivateRoute from './Components/PrivateRoute.jsx';
 import Error from './Components/Error.jsx';
+import AboutUs from './Components/AboutUs.jsx';
 
 
 const router = createBrowserRouter([
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: '/footer',
     element: <Footer></Footer>
+  },
+  {
+    path: '/about',
+    element: <AboutUs></AboutUs>
   }
 ]);
 
