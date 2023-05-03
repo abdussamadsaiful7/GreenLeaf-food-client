@@ -1,21 +1,20 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
 import { AuthContext } from './AuthProviders';
 import { toast } from 'react-hot-toast';
 import { NavLink } from 'react-router-dom'
 
 const Header = () => {
-
+    const { user, logOut } = useContext(AuthContext);
 
     const notify = () => toast.error('Successfully logout!');
 
-    const {user, logOut} = useContext(AuthContext);
-    const handleLogout =()=>{
+
+    const handleLogout = () => {
         logOut()
-        .then()
-        .catch(error=>{
-            console.log(error)
-        })
+            .then()
+            .catch(error => {
+                console.log(error)
+            })
         notify();
     }
 
@@ -34,7 +33,7 @@ const Header = () => {
                             <li><NavLink to='/register'>Registration</NavLink></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-2xl font-bold text-yellow-600 ">𝕲𝖗𝖊𝖊𝖓𝕷𝖊𝖆𝕱- 𝕱𝖔𝖔𝖉</a>
+                    <a className="btn btn-ghost normal-case text-xl font-bold text-yellow-600 ">𝕲𝖗𝖊𝖊𝖓𝕷𝖊𝖆𝕱- 𝕱𝖔𝖔𝖉</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -42,11 +41,14 @@ const Header = () => {
                         <li><NavLink to='/blog'>Blog</NavLink></li>
                         <li><NavLink to='/login'>Login</NavLink></li>
                         <li><NavLink to='/register'>Registration</NavLink></li>
-                        <p className='mt-2'>{user && <span>{user?.email} <button className='btn btn-sm ml-4' onClick={handleLogout}>Sign Out</button></span>}</p>
+                        <p className='mt-2 mr-4'>{user && <span>{user?.email} <button className='btn btn-sm ml-4' onClick={handleLogout}>Sign Out</button></span>}</p>
+                        {
+                            user?.email ?  <img style={{width:'40px',height:'40px',borderRadius:'50%'}} src={user?.photoURL} alt="" /> : null
+                        }
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/about' className="btn btn-sm">About</Link>
+                    <NavLink to='/about' className="btn btn-sm">About</NavLink>
                 </div>
             </div>
         </div>

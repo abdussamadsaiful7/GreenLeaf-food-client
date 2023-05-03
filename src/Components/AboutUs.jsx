@@ -14,7 +14,7 @@ const AboutUs = () => {
     return (
         <div className='mx-20 my-14'>
 
-            <div className='flex justify-center gap-4'>
+            <div className='lg:flex justify-center gap-4'>
                 <div className='shadow-lg p-4'>  <img className='w-96' src={res1} /></div>
                 <div className='shadow-lg p-4'> <img className='w-96 ' src={res2} /></div>
             </div>
