@@ -1,11 +1,15 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthProviders';
 
 const Register = () => {
     const [error, setError] = useState('');
     const [success, setSuccess]= useState('');
     const { createUser } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
 
     const handleRegister = (event) => {
         event.preventDefault();
@@ -27,7 +31,8 @@ const Register = () => {
             return
         }
         else{
-            setSuccess('Registration successful!')
+            setSuccess('Registration successful!');
+            navigate(from,{replace: true})
         }
 
         createUser(email, password)
@@ -72,9 +77,15 @@ const Register = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
+                                    <span className="label-text">Confirm password</span>
+                                </label>
+                                <input type="password" name='confirm' placeholder="Confirm password" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
                                     <span className="label-text">photo URL</span>
                                 </label>
-                                <input type="text" name='confirm' placeholder="Confirm password" className="input input-bordered" required />
+                                <input type="text" name='photo' placeholder="photo URL" className="input input-bordered" required />
                             </div>
                             <label className="label">
                                 <a href="#" className="label-text-alt ">Already have an account?

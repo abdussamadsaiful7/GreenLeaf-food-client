@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const ChefCard = ({ data }) => {
     //console.log(data)
     const { chef_name, number_of_recipes, designation, chef_picture, years_of_experience, likes } = data;
+
+    const notify = () => toast.success('Your favorite food is show!');
 
     return (
         <div className=''>
@@ -18,7 +21,7 @@ const ChefCard = ({ data }) => {
                     <p>Number of Recipes: {number_of_recipes} Items</p>
                     <p>👍 {likes}K</p>
                     <div className="card-actions">
-                        <button className="btn btn-primary"><Link to={`/recipe/${data.id}`} >Favorite Recipe</Link></button>
+                        <button  onClick={notify} className="btn btn-primary"><Link to={`/recipe/${data.id}`} >Famous Recipe</Link></button>
                     </div>
                 </div>
             </div>
