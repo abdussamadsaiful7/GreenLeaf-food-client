@@ -46,6 +46,10 @@ const router = createBrowserRouter([
         path: 'recipe/:id',
         element: <PrivateRoute> <FavoriteRecipe></FavoriteRecipe></PrivateRoute>,
         loader: ({params}) => fetch(`https://assignment-server-abdussamadsaiful7.vercel.app/allData/${params.id}`)
+      },
+      {
+        path: '/about',
+        element: <AboutUs></AboutUs>
       }
 
     ]
@@ -58,10 +62,7 @@ const router = createBrowserRouter([
     path: '/footer',
     element: <Footer></Footer>
   },
-  {
-    path: '/about',
-    element: <AboutUs></AboutUs>
-  }
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
