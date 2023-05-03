@@ -1,16 +1,21 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from './AuthProviders';
+import { toast } from 'react-hot-toast';
 
 const Header = () => {
+
+
+    const notify = () => toast.error('Successfully logout!');
 
     const {user, logOut} = useContext(AuthContext);
     const handleLogout =()=>{
         logOut()
-        .then(result=>{})
+        .then()
         .catch(error=>{
             console.log(error)
         })
+        notify();
     }
 
     return (

@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthProviders';
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from './firebase/firebase.config';
+import { toast } from 'react-hot-toast';
 
 const Login = () => {
     const auth = getAuth(app);
@@ -18,6 +19,7 @@ const Login = () => {
             const user = result.user;
             console.log(user)
             navigate(from,{replace: true})
+            toast.success('Successfully login by Google!')
         })
         .catch(error=>{
             const errorMessage = error.message;
@@ -32,6 +34,7 @@ const Login = () => {
             const user = result.user;
             console.log(user)
             navigate(from,{replace: true})
+            toast.success('Successfully login by Github!')
         })
         .catch(error=>{
             const errorMessage = error.message;
@@ -54,6 +57,7 @@ const Login = () => {
             console.log(loggedUser)
             navigate(from,{replace: true})
             form.reset()
+            toast.success('Successfully login!')
            
         })
         .catch(error=>{
