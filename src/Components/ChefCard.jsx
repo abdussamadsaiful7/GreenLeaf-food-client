@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const ChefCard = ({ data }) => {
     //console.log(data)
@@ -12,7 +13,7 @@ const ChefCard = ({ data }) => {
         <div className=''>
             <div className="card w-80 h-3/4 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
-                    <img src={chef_picture} alt="photo" className="rounded-lg w-96 h-96" />
+                    <LazyLoadImage src={chef_picture} alt="photo" className="rounded shadow-lg w-96 h-96" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">Name: {chef_name}</h2>
