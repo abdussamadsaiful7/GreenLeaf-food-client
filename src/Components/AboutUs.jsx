@@ -5,6 +5,8 @@ import res2 from '../assets/res3.jpg'
 import brach1 from '../assets/branch1.jpg'
 import brach2 from '../assets/branch2.jpg'
 import brach3 from '../assets/branch3.jpg'
+import Lottie from "lottie-react";
+import about from "../assets/121689-restaurant.json";
 
 
 
@@ -12,14 +14,20 @@ import brach3 from '../assets/branch3.jpg'
 
 const AboutUs = () => {
     return (
-        <div className='mx-20 my-14'>
+        <div className='mx-20 mt-8 mb-14'>
 
-            <div className='lg:flex justify-center gap-4'>
+            {/* <div className='lg:flex justify-center gap-4'>
                 <div className='shadow-lg p-4'>  <img className='w-96' src={res1} /></div>
                 <div className='shadow-lg p-4'> <img className='w-96 ' src={res2} /></div>
+            </div> */}
+
+            <div className='w-80 h-64 mx-auto'>
+                <div>
+                    <Lottie animationData={about} loop={true} />
+                </div>
             </div>
 
-            <h2 className='text-center text-4xl font-semibold mb-2 mt-10'>𝑨𝒃𝒐𝒖𝒕 𝑼𝒔</h2>
+            <h2 className='text-center text-4xl font-semibold mb-2'>𝑨𝒃𝒐𝒖𝒕 𝑼𝒔</h2>
             <p>Welcome to our Bangladeshi restaurant, it's establish in 1992, where we're dedicated to providing our guests with an unforgettable dining experience. Our menu is inspired by the rich and diverse culinary traditions of our region, and we're committed to using only the freshest and highest-quality ingredients in every dish we serve.</p>
             <br />
             <p> Our chefs are passionate about their craft, and their creativity and expertise are reflected in every item on our menu. We're equally passionate about hospitality, and our friendly and attentive staff will do everything they can to ensure that your visit is enjoyable and memorable.</p>

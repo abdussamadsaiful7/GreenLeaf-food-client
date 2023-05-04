@@ -4,7 +4,6 @@ import { AuthContext } from './AuthProviders';
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from './firebase/firebase.config';
 import { toast } from 'react-hot-toast';
-import { FaGoogle } from 'react-icons/fa';
 import google from '../assets/google.png'
 import github from '../assets/github.png'
 

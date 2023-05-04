@@ -21,7 +21,7 @@ const Recipes = ({ recipe }) => {
                     <p>Description: {description}</p>
                     <p>Price: $ {price}</p>
                     <div className="card-actions justify-end">
-                        <button disabled={disabled} onClick={notify} className="btn btn-primary">
+                        <button disabled={disabled} onClick={notify} className="btn btn-sm btn-active btn-ghost hover:text-red-600 font-bold">
                             Favorite Recipe</button>
                     </div>
                 </div>

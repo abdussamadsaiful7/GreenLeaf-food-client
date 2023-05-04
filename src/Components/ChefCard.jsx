@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { FaFacebookSquare, FaPinterest, FaRegThumbsUp, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const ChefCard = ({ data }) => {
     //console.log(data)
@@ -20,9 +21,15 @@ const ChefCard = ({ data }) => {
                     <p>Designation: {designation}</p>
                     <p>Chef Experience: {years_of_experience} years.</p>
                     <p>Number of Recipes: {number_of_recipes} Items</p>
-                    <p>👍 {likes}K</p>
+                    <p className='flex items-center'><FaRegThumbsUp className='mr-2'/> {likes}K</p>
                     <div className="card-actions">
-                        <button  onClick={notify} className="btn btn-primary"><Link to={`/recipe/${data.id}`} >Famous Recipe</Link></button>
+                        <button  onClick={notify} className="btn btn-sm btn-active btn-ghost hover:text-red-600 font-bold"><Link to={`/recipe/${data.id}`} >Famous Recipe</Link></button>
+                    </div>
+                    <div className='grid grid-cols-4 gap-4 text-xl mt-4'>
+                        <p><FaFacebookSquare/></p>
+                        <p><FaYoutube/></p>
+                        <p><FaInstagram/></p>
+                        <p><FaPinterest/></p>
                     </div>
                 </div>
             </div>

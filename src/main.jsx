@@ -20,6 +20,7 @@ import Error from './Components/Error.jsx';
 import AboutUs from './Components/AboutUs.jsx';
 
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -50,7 +51,8 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <AboutUs></AboutUs>
-      }
+      },
+    
 
     ]
   },
