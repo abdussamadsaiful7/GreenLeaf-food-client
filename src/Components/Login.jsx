@@ -4,6 +4,11 @@ import { AuthContext } from './AuthProviders';
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from './firebase/firebase.config';
 import { toast } from 'react-hot-toast';
+import { FaGoogle } from 'react-icons/fa';
+import google from '../assets/google.png'
+import github from '../assets/github.png'
+
+
 
 const Login = () => {
     const auth = getAuth(app);
@@ -97,11 +102,14 @@ const Login = () => {
                             </div>
                         </form>
                         <div className='text-center'>
+                        <p>Or</p>
                             <div  className=" mt-6">
-                                <button onClick={handleLoginWithGoogle} className="btn btn-sm">Login by Google</button>
+                                <button onClick={handleLoginWithGoogle} className="btn btn-sm btn-active hover:bg-blue-600 hover:text-white btn-ghost">
+                                <img className='w-8 h-8 mr-2' src={google}/> Login by Google</button>
                             </div>
                             <div className=" my-6">
-                                <button onClick={handleGithubSignIn} className="btn btn-sm">Login by Github</button>
+                                <button onClick={handleGithubSignIn} className="btn btn-sm btn-active hover:bg-blue-600 hover:text-white btn-ghost">
+                                <img className='w-8 h-8 mr-2' src={github}/> Login by Github</button>
                             </div>
                         </div>
                     </div>
