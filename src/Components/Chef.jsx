@@ -11,10 +11,10 @@ const Chef = () => {
             .catch(error => console.log(error))
     }, [])
     return (
-        <div className='mt-20'>
-            <div className='bg-slate-200 p-4 shadow-md mb-14'>
-                <div className='text-center bg-white shadow-lg p-2'>
-                    <h2 className='text-4xl'>𝙊𝙪𝙧 𝙎𝙩𝙖𝙛𝙛𝙨</h2>
+        <div className='mt-10'>
+            <div className=''>
+                <div className='text-center'>
+                    <h2 className='text-5xl'>𝙊𝙪𝙧 𝒄𝒉𝒆𝒇𝙨</h2>
                     <p><span className='text-2xl'>🥧</span>Good services and fresh foods are our motto.
                     <span className='text-2xl'>🥧</span></p>
                 </div>

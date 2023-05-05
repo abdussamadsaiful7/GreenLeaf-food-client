@@ -11,6 +11,9 @@ import { FaLeaf } from "react-icons/fa";
 import Lottie from "lottie-react";
 import chef from "../assets/120972-chef.json";
 import rest from "../assets/21652-delivery-guy-waiting.json";
+import showing from "../assets/75820-chef-showing-the-burger.json";
+import foodServe from '../assets/foodServe.jpg'
+import Propuler from './Propuler';
 
 
 
@@ -29,18 +32,15 @@ const Home = () => {
                     <p>Welcome to our restaurant in Dhaka, Bangladesh, where we pride ourselves on serving traditional and famous dishes that will tantalize your taste buds. Our menu features an array of authentic Bangladeshi cuisine, prepared with fresh, local ingredients and seasoned with aromatic spices. We aim to provide a dining experience that showcases the rich culinary heritage of our country while also delivering exceptional customer service. Come and enjoy our delicious food, and let us transport you to the heart of Bangladesh's gastronomic culture.</p>
                 </div>
                 <div>
-                    <img className='shadow-lg' src={chief} alt='photo' />
+                <Lottie className='md:w-96 md:h-96 mx-auto w-64' animationData={showing} loop={true} />
                 </div>
             </div>
-            <div className=' lg:flex items-center justify-around  my-10 p-8 shadow-lg 
+            <div className=' lg:flex items-center justify-around  my-8 p-8 shadow-lg 
             bg-[url("https://i.ibb.co/0Z4z0f6/gb-55.jpg")] bg-cover'>
-                {/* <div>
-                    <img className='w-96 shadow-lg' src={service} />
-                </div> */}
                 <div className='ml-20 '>
 
                     <h2 className='bg-yellow-500 text-3xl my-8 py-2 rounded 
-                    text-white font-bold mr-80 text-center shadow-lg'>𝑶𝒖𝒓 𝑺𝒆𝒓𝒗𝒊𝒄𝒆𝒔</h2>
+                    text-white font-bold mr-64 text-center shadow-lg'>𝑶𝒖𝒓 𝑺𝒆𝒓𝒗𝒊𝒄𝒆𝒔</h2>
                     <ul className='font-semibold'>
                         <li className='mb-2 text-lg'> 🍔 Home delivery</li>
                         <li className='mb-2 text-lg'> 🍦 Instant Food cooking</li>
@@ -105,6 +105,7 @@ const Home = () => {
             </div>
 
             <Chef></Chef>
+            <Propuler></Propuler>
         </div>
     );
 };

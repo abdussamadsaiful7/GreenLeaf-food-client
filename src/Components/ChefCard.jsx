@@ -11,10 +11,10 @@ const ChefCard = ({ data }) => {
     const notify = () => toast.success('Your favorite food is show!');
 
     return (
-        <div className=''>
+        <div>
             <div className="card w-80 h-3/4 bg-base-100 shadow-xl">
-                <figure className="px-10 pt-10">
-                    <LazyLoadImage src={chef_picture} alt="photo" className="rounded shadow-lg w-96 h-96" />
+                <figure className="px-10 pt-8">
+                    <LazyLoadImage  src={chef_picture} alt="photo" className="rounded shadow-lg w-96 h-96" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">Name: {chef_name}</h2>
@@ -23,7 +23,7 @@ const ChefCard = ({ data }) => {
                     <p>Number of Recipes: {number_of_recipes} Items</p>
                     <p className='flex items-center'><FaRegThumbsUp className='mr-2'/> {likes}K</p>
                     <div className="card-actions">
-                        <button  onClick={notify} className="btn btn-sm btn-active btn-ghost hover:text-red-600 font-bold"><Link to={`/recipe/${data.id}`} >Famous Recipe</Link></button>
+                        <button  onClick={notify} className="btn btn-sm hover:btn-active btn-active btn-ghost hover:text-red-600 font-bold transition duration-300 ease-in-out"><Link to={`/recipe/${data.id}`} >Famous Recipe</Link></button>
                     </div>
                     <div className='grid grid-cols-4 gap-2 text-xl mt-4'>
                         <p><FaFacebookSquare/></p>
