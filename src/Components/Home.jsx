@@ -18,7 +18,7 @@ const Home = () => {
     return (
         <div className='lg:mx-10'>
             <div style={{ backgroundImage: "url('https://i.ibb.co/RhWc59f/new222.jpg')", }}
-                className='mt-4 lg:flex justify-between mb-10 shadow-lg p-4'>
+                className=' lg:flex justify-between mb-10 shadow-lg p-4'>
                 <div className='lg:p-4 font-bold'>
                     <p> Bangladeshi restaurant!</p>
 
@@ -33,7 +33,7 @@ const Home = () => {
                 </div>
             </div>
             <div className=' lg:flex items-center justify-around  my-10 p-8 shadow-lg 
-            bg-[url("https://i.ibb.co/w7wfp1x/woodbg.jpg")] bg-cover'>
+            bg-[url("https://i.ibb.co/0Z4z0f6/gb-55.jpg")] bg-cover'>
                 {/* <div>
                     <img className='w-96 shadow-lg' src={service} />
                 </div> */}
