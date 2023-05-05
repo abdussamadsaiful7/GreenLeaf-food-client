@@ -25,7 +25,7 @@ const ChefCard = ({ data }) => {
                     <div className="card-actions">
                         <button  onClick={notify} className="btn btn-sm btn-active btn-ghost hover:text-red-600 font-bold"><Link to={`/recipe/${data.id}`} >Famous Recipe</Link></button>
                     </div>
-                    <div className='grid grid-cols-4 gap-4 text-xl mt-4'>
+                    <div className='grid grid-cols-4 gap-2 text-xl mt-4'>
                         <p><FaFacebookSquare/></p>
                         <p><FaYoutube/></p>
                         <p><FaInstagram/></p>

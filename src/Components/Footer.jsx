@@ -4,7 +4,7 @@ const Footer = () => {
     return (
 
         <div>
-            <footer className="footer p-32 md:mx-0  bg-base-200 md:text-base-content">
+            <footer className="footer px-32 py-8 md:mx-0  bg-base-200 md:text-base-content">
                 <div>
                     <span className="footer-title">Services</span>
                     <a className="link link-hover">Famous food</a>
