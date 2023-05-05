@@ -24,7 +24,7 @@ const Header = () => {
     }
 
     return (
-        <div className='mx-10 shadow-md p-4'>
+        <div className='md:mx-10 shadow-md p-4'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -38,11 +38,11 @@ const Header = () => {
                             <li><NavLink to='/register'>Registration</NavLink></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl font-bold text-yellow-600"><span className='text-4xl flex'> <span className='text-green-400'><FaLeaf/></span> 𝕲</span>𝖗<span className='text-green-400'> 𝖊𝖊𝖓𝕷𝖊</span> 𝖆𝕱-𝕱𝖔𝖔𝖉</a>
+                    <a className="btn btn-ghost normal-case md:text-xl md:font-bold text-yellow-600"><span className='lg:text-4xl flex'> <span className='text-green-400'><FaLeaf/></span> 𝕲</span>𝖗<span className='text-green-400'> 𝖊𝖊𝖓𝕷𝖊</span> 𝖆𝕱-𝕱𝖔𝖔𝖉</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><NavLink className='ml-20' to='/'>Home</NavLink></li>
+                        <li><NavLink className='md:ml-20' to='/'>Home</NavLink></li>
                         <li><NavLink to='/blog'>Blog</NavLink></li>
                         <li><NavLink to='/login'>Login</NavLink></li>
                         <li><NavLink to='/register'>Registration</NavLink></li>

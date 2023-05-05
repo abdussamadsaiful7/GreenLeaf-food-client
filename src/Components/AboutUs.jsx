@@ -1,7 +1,4 @@
-import React from 'react'
-import res0 from '../assets/res.jpg'
-import res1 from '../assets/res2.jpg'
-import res2 from '../assets/res3.jpg'
+import React from 'react';
 import brach1 from '../assets/branch1.jpg'
 import brach2 from '../assets/branch2.jpg'
 import brach3 from '../assets/branch3.jpg'
@@ -14,14 +11,14 @@ import about from "../assets/121689-restaurant.json";
 
 const AboutUs = () => {
     return (
-        <div className='mx-20 mt-8 mb-14'>
+        <div className='md:mx-20 mx-4 mt-8 mb-14'>
 
             {/* <div className='lg:flex justify-center gap-4'>
                 <div className='shadow-lg p-4'>  <img className='w-96' src={res1} /></div>
                 <div className='shadow-lg p-4'> <img className='w-96 ' src={res2} /></div>
             </div> */}
 
-            <div className='w-80 h-64 mx-auto'>
+            <div className='md:w-80 md:h-64 w-64 h-64 mx-auto'>
                 <div>
                     <Lottie animationData={about} loop={true} />
                 </div>

@@ -16,15 +16,15 @@ import rest from "../assets/21652-delivery-guy-waiting.json";
 
 const Home = () => {
     return (
-        <div className='mx-10'>
+        <div className='lg:mx-10'>
             <div style={{ backgroundImage: "url('https://i.ibb.co/RhWc59f/new222.jpg')", }}
                 className='mt-4 lg:flex justify-between mb-10 shadow-lg p-4'>
-                <div className='p-4 font-bold'>
+                <div className='lg:p-4 font-bold'>
                     <p> Bangladeshi restaurant!</p>
 
-                    <h1 className='font-bold text-4xl flex'><span className='text-green-400'><FaLeaf /></span>𝑮𝒓<span className='text-green-400'>𝒆𝒆𝒏𝑳𝒆</span>𝒂𝒇 𝒇𝒐𝒐𝒅 𝑹𝒔𝒕.</h1>
+                    <h1 className='font-bold lg:text-4xl flex'><span className='text-green-400'><FaLeaf /></span>𝑮𝒓<span className='text-green-400'>𝒆𝒆𝒏𝑳𝒆</span>𝒂𝒇 𝒇𝒐𝒐𝒅 𝑹𝒔𝒕.</h1>
 
-                    <h5><small className='ml-72'>Since 1992.</small><br /><small className='ml-40'>Allah Korim mosque, Mohammadpur, <br /> <span className='ml-64'>Dhaka, Bangladesh.</span></small></h5>
+                    <h5><small className='md:ml-72'>Since 1992.</small><br /><small className='md:ml-40'>Allah Korim mosque, Mohammadpur, <br /> <span className='md:ml-64'>Dhaka, Bangladesh.</span></small></h5>
                     <button className=' bg-yellow-500 text-white p-1 my-2 text-right rounded font-semibold'>Our mission, purpose, tradition.</button>
                     <p>Welcome to our restaurant in Dhaka, Bangladesh, where we pride ourselves on serving traditional and famous dishes that will tantalize your taste buds. Our menu features an array of authentic Bangladeshi cuisine, prepared with fresh, local ingredients and seasoned with aromatic spices. We aim to provide a dining experience that showcases the rich culinary heritage of our country while also delivering exceptional customer service. Come and enjoy our delicious food, and let us transport you to the heart of Bangladesh's gastronomic culture.</p>
                 </div>
@@ -56,7 +56,7 @@ const Home = () => {
                 {/* Lottie Animation */}
                 <div>
                     <div >
-                        <Lottie className='w-96 h-96 mx-auto' animationData={rest} loop={true} />
+                        <Lottie className='md:w-96 md:h-96 mx-auto w-64' animationData={rest} loop={true} />
                     </div>
                 </div>
             </div>
